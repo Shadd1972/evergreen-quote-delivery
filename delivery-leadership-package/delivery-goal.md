@@ -19,4 +19,4 @@
 - _What you are intentionally not doing._
 - Adding children pages
 - When adding any changes to the code ensuring to not make the code unweilding or cumbersome to read and or review
-- Adding a purchse option
+- Adding a purchase option
