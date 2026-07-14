@@ -10,45 +10,148 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
-
-  <style>
-    body { background: #f7f9f8; color: #1f2a2e; }
-    .evg-hero { background: #0f5132; color: #fff; }
-    .evg-badge { letter-spacing: .08em; }
-  </style>
+  <link rel="stylesheet" href="css/theme.css" />
 </head>
 <body>
 
-  <header class="border-bottom bg-white">
-    <nav class="navbar container py-2">
-      <span class="navbar-brand fw-bold text-success">Evergreen Insurance</span>
-      <span class="badge text-bg-secondary evg-badge">STARTER</span>
-    </nav>
-  </header>
+  <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand" href="#">Evergreen Insurance</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMain"
+        aria-controls="navMain"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Coverage</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Claims</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
 
   <main>
-    <section class="evg-hero py-5 text-center">
+    <section class="hero py-5 text-center text-white bg-success">
       <div class="container">
-        <h1 class="display-6 fw-bold">Coverage that grows with you.</h1>
-        <p class="lead mb-0">Get an indicative quote in under a minute.</p>
+        <h1 class="display-5 fw-bold">Coverage that grows with you</h1>
+        <p class="lead tagline">Get a personalized quote in under a minute.</p>
       </div>
     </section>
 
-    <section class="container py-5 text-center">
-      <p class="text-muted mb-1">This is the engineering starter project.</p>
-      <p class="mb-0">
-        The quote form, theme, calculator, and CI are assembled here over the
-        week from the pieces in your lab kit. See
-        <code>CAPSTONE-BRIEF.md</code> and <code>README.md</code> to begin.
-      </p>
+    <section class="quote-form-section container py-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title">Get Your Quote</h2>
+
+         <form id="quote-form" class="quote-form row g-3">
+            <div class="col-md-6">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="Jane Doe" required />
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">ZIP Code</label>
+              <input type="text" id="zip" class="form-control" placeholder="82001" maxlength="5" required />
+            </div>
+
+            <div class="col-md-3">
+              <label for="coverageType" class="form-label">Coverage Type</label>
+              <select id="coverageType" class="form-select" required>
+                <option value="">Select coverage</option>
+                <option value="auto">Auto</option>
+                <option value="home">Home</option>
+                <option value="renters">Renters</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label for="coverageAmount" class="form-label">
+                Coverage Amount: $<span id="coverageAmountDisplay">50000</span>
+              </label>
+              <input
+                type="range"
+                id="coverageAmount"
+                class="form-range"
+                min="10000"
+                max="500000"
+                step="10000"
+                value="50000"
+              />
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-success">Calculate Premium</button>
+            </div>
+          </form>
+
+          <div id="premium-box" class="premium-box mt-4" hidden>
+            <div class="premium-label text-muted">Estimated Monthly Premium</div>
+            <div class="premium-value display-6 fw-bold" id="premium-value">$0</div>
+          </div>
+        </div>
+      </div>
     </section>
+
+     <!--    HIDDEN: Testimonials pending legal approval 
+    <section class="testimonials container py-5" style="display: none;">
+      <h2 class="text-center mb-4">What our customers say</h2>
+        <div class="testimonial-row row g-4">
+          <div class="col-md-4">
+           <div class="card h-100">
+              <div class="card-body">
+                <p class="card-text">"Switched in five minutes. Saved $40 a month."</p>
+                <footer class="blockquote-footer mt-2">M. Alvarez, Boston</footer>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <p class="card-text">"The claim process was painless. Honestly surprised."</p>
+              <footer class="blockquote-footer mt-2">T. Nguyen, Quincy</footer>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <p class="card-text">"Renters coverage at a price I expected. No surprises."</p>
+              <footer class="blockquote-footer mt-2">J. O'Connor, Cambridge</footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Placeholder until testimonials are approved -->
+    <section class="container py-5 text-center">
+      <h2 class="mb-3">Coming Soon</h2>
+      <p class="lead text-muted">Direct testimonies from our clients.</p>
+    </section>
+
+
   </main>
 
-  <footer class="py-3 text-center bg-dark text-light">
-    <small>Evergreen Insurance — placeholder starter page.</small>
-  </footer>
+    <footer id="footer" class="site-footer py-3 text-center bg-dark text-light">
+      <p class="mb-0">&copy; 2026 Evergreen Insurance. For training purposes only.</p>
+    </footer>
 
-  <!-- Bootstrap bundle (provided) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- INSERT: quote-calc script tag + wiring snippet (Day 3) -->
+
 </body>
 </html>
