@@ -1,0 +1,45 @@
+/* Evergreen Insurance — provided brand theme overlay
+   Applied on top of Bootstrap 5. Do not modify in the capstone —
+   "assemble, not author." */
+
+:root {
+  --evg-green: #047751;
+  --evg-green-dark: #022712;
+  --evg-green-soft: #e6f0ea;
+  --evg-ink: #1f2a2e;
+  --evg-muted: #6b758b;
+}
+
+body {
+  color: var(--evg-ink);
+  background: #f7f9f8;
+}
+
+/* Tint Bootstrap success utilities to Evergreen brand green */
+.bg-success { background-color: var(--evg-green) !important; }
+.btn-success {
+  background-color: var(--evg-green) !important;
+  border-color: var(--evg-green) !important;
+}
+.btn-success:hover {
+  background-color: var(--evg-green-dark) !important;
+  border-color: var(--evg-green-dark) !important;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--evg-green) 0%, var(--evg-green-dark) 100%) !important;
+}
+
+.tagline {
+  opacity: 0.92;
+}
+
+.premium-box {
+  padding: 20px;
+  background: var(--evg-green-soft);
+  border-left: 4px solid var(--evg-green);
+  border-radius: 4px;
+}
+
+.premium-label { color: var(--evg-muted); }
+.premium-value { color: var(--evg-green); }
