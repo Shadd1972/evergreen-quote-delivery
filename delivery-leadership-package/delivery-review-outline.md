@@ -14,9 +14,9 @@
 
 ## Slide 2 — What shipped
 
-- **Screenshot:** _[Insert screenshot of assembled Evergreen Quote app on `main`]_
-- **Merged PR:** _[Insert PR link]_
-- **Green CI run:** _[Insert CI run link]_
+- **Screenshot:** https://github.com/Shadd1972/evergreen-quote-delivery
+- **Merged PR:** https://github.com/Shadd1972/evergreen-quote-delivery/pull/8 
+- **Green CI run:** _https://github.com/Shadd1972/evergreen-quote-delivery/actions/runs/29507401996/job/87651638795?pr=7
 
 **What the final app includes:**
 - `index.html` — 5 assembled sections: navbar, hero with brand promise, quote form with coverage type / coverage amount slider / Calculate Premium button / result box, testimonials placeholder (pending legal), and footer
