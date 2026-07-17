@@ -1,7 +1,5 @@
 # Delivery Review — Evergreen Quote
 
-> Copy to `delivery-leadership-package/delivery-review-outline.md`. Five slides OR one page. Target: 5 minutes spoken, then 3 minutes of questions.
-
 ---
 
 ## Slide 1 — Delivery goal & did we hit it?
