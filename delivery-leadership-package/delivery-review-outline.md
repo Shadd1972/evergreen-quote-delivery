@@ -58,16 +58,3 @@ Marketing requested a new navigation link to support an A/B test, with a Thursda
 
 ---
 
-## Q&A prep — likely questions
-
-**"Why didn't you ship the testimonials?"**
-Legal placed a hold on all three customer quotes pending signed release forms — a two-week process. Shipping them would have been a compliance violation. The commented-out code and "Coming Soon" placeholder are already in the repo; once Legal confirms the releases are signed, it's a single code change and a new commit — no rebuild required. The decision is documented in `decision-memo.md`.
-
-**"Why didn't you complete the 'Compare Plans' nav link Marketing asked for?"**
-The request arrived without a destination URL, which meant it could not be executed. We set a dependency gate: URL confirmed by Wednesday EOD, 30-minute time-box. The URL was not supplied in time, so the link was deferred and logged in the risk register as R2. The core deliverable — the wired quote calculator — shipped on schedule. If Marketing provides the URL, the change is a single `<li>` addition and takes under 30 minutes.
-
-**"If you ran this week again with three engineers, what's the first thing you'd ask them?"**
-Who owns the legal and compliance relationship for any content on this page? That one question on Day 1 surfaces the testimonials constraint before it becomes an inject, and it gives the team a named escalation path if a similar hold appears mid-sprint.
-
-**"How do you know the CI run is a meaningful gate and not just a formality?"**
-The workflow runs three substantive checks: HTML validation via `html-validate`, a smoke check that confirms all three required files are present (`index.html`, `css/theme.css`, `js/quote-calc.js`), and a syntax check on the JavaScript via `node --check`. A red run on any of those would have blocked the merge. The CI result is evidence the page is structurally valid and all required assets are present — not a rubber stamp.
