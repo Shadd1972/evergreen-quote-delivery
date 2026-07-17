@@ -27,8 +27,8 @@
 
 ## Slide 3 — Two key decisions
 
-- **Decision 1:** Commented out the testimonials section and shipped a "Coming Soon" placeholder instead of live customer quotes.
-  Why it mattered: Legal placed a hold on all three drafted testimonials pending signed customer release forms — an estimated two-week process. Shipping them as written would have created a compliance violation and risked pulling the entire release. Commenting them out took minutes, keeps the work intact for instant re-activation when approvals arrive, and leaves the page looking intentional rather than broken.
+- **Decision 1:** Commented out the AI testimonials section.
+  Why it mattered: As the AI quotes are nto real I did not want to provide false data it does not align with our product and company culture..
 
 - **Decision 2:** Time-boxed the Marketing "Compare Plans" nav link request to 30 minutes maximum, contingent on receiving a destination URL by Wednesday EOD.
   Why it mattered: The request arrived mid-sprint with no destination URL and no acceptance criteria, and threatened to defer the Day 3 quote-calculator wiring — the core deliverable. By setting a firm time-box and a dependency gate (URL by Wednesday EOD), the scope boundary held, the quote calculator shipped on schedule, and the nav request was logged transparently in the risk register as R2 rather than silently absorbed or silently dropped.
